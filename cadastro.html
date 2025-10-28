@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <!-- Head padrão das páginas -->
+    <head>
+        <title>Cadastre-se - ONGatinhos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/assets/icon/casa-do-gato.png">
+    </head>
+
+    <body>
+        <!-- Cabeçalho com navegação -->
+        <header>
+            <h1>ONGatinhos</h1>
+            <span>Resgatando gatinhos, salvando corações!</span>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="projetos.html">Projetos Sociais</a></li>
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Imagem de destaque -->
+        <figure>
+            <picture>
+                <source srcset="/assets/images/gato-laranja.webp" type="image/webp">
+                <source srcset="/assets/images/gato-laranja.jpg" type="image/jpg">
+                <img src="/assets/images/gato-laranja.jpg" alt="Gato laranja deitado confortável" width="1000" height="600">
+            </picture>
+        </figure>
+
+        <!-- Formulário de cadastro -->
+        <main>
+            <section>
+                <h2>Cadastre-se para Ajudar</h2>
+                <p>Preencha o formulário abaixo para se tornar um voluntário ou para receber nosso contato sobre adoção.</p>
+                
+                <form action="#" method="post"> <fieldset>
+                        <legend>Dados Pessoais</legend>
+                        
+                        <div>
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Insira seu email" required>
+                        </div>
+                        
+                        <div>
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" 
+                                   pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" 
+                                   title="Digite um CPF no formato 000.000.000-00" required>
+                        </div>
+
+                        <div>
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(00)00000-0000">
+                        </div>
+
+                        <div>
+                            <label for="nascimento">Data de Nascimento</label>
+                            <input type="date" id="nascimento" name="nascimento" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Endereço</legend>
+
+                        <div>
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" name="cep" placeholder="00000-000">
+                        </div>
+
+                        <div>
+                            <label for="endereco">Endereço</label>
+                            <input type="text" id="endereco" name="endereco" placeholder="Insira seu endereço">
+                        </div>
+
+                        <div>
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="Insira sua cidade">
+                        </div>
+                        
+                        <div>
+                            <label for="estado">Estado</label>
+                            <input type="text" id="estado" name="estado" placeholder="Insira seu estado">
+                        </div>
+                    </fieldset>
+
+                    <button type="submit">
+                        Cadastrar-se
+                    </button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Rodapé da página -->
+        <footer>
+            <p>&copy; 2025 ONGatinhos - Todos os direitos reservados</p>
+            <p>Feito com 💛 para salvar vidas felinas</p>
+        </footer>
+
+    </body>
+    
+</html>
