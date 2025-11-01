@@ -6,96 +6,103 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="/assets/icon/casa-do-gato.png">
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
         <!-- Cabeçalho com navegação -->
         <header>
-            <h1>ONGatinhos</h1>
-            <span>Resgatando gatinhos, salvando corações!</span>
+            <div class="top">
+                <h1>ONGatinhos</h1>
+                <p>Resgatando gatinhos, salvando corações!</p>
+            </div>
 
-            <nav>
-                <ul>
+            <nav class="nav">
+                <ul class="nav-list">
                     <li><a href="index.html">Página Inicial</a></li>
                     <li><a href="projetos.html">Projetos Sociais</a></li>
-                    <li><a href="cadastro.html">Cadastre-se</a></li>
+                    <li><a href="cadastro.html" class="active">Cadastre-se</a></li>
                 </ul>
             </nav>
         </header>
 
         <!-- Imagem de destaque -->
-        <figure>
+        <div class="hero">
             <picture>
                 <source srcset="/assets/images/gato-laranja.webp" type="image/webp">
                 <source srcset="/assets/images/gato-laranja.jpg" type="image/jpg">
-                <img src="/assets/images/gato-laranja.jpg" alt="Gato laranja deitado confortável" width="1000" height="600">
+                <img src="/assets/images/gato-laranja.jpg" alt="Gato laranja deitado confortável">
             </picture>
-        </figure>
+            <div class="hero-overlay">
+                <h2>Faça parte da nossa família</h2>
+                <p>Preencha o formulário abaixo para se tornar um voluntário ou para receber nosso contato sobre adoção!</p>
+            </div>
+        </div>
 
         <!-- Formulário de cadastro -->
         <main>
             <section>
-                <h2>Cadastre-se para Ajudar</h2>
-                <p>Preencha o formulário abaixo para se tornar um voluntário ou para receber nosso contato sobre adoção.</p>
-                
-                <form action="#" method="post"> <fieldset>
-                        <legend>Dados Pessoais</legend>
-                        
-                        <div>
-                            <label for="nome">Nome Completo</label>
-                            <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required>
-                        </div>
-                        
-                        <div>
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" placeholder="Insira seu email" required>
-                        </div>
-                        
-                        <div>
-                            <label for="cpf">CPF</label>
-                            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" 
-                                   pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" 
-                                   title="Digite um CPF no formato 000.000.000-00" required>
+                <div class="form-container">
+                <form id="cadastroForm">
+                    <legend><h3>Dados Pessoais</h3></legend>
+
+                    <div class="form-group">
+                        <label for="nome">Nome Completo <span class="required">*</span></label>
+                        <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="Insira seu email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpf">CPF <span class="required">*</span></label>
+                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" 
+                                pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" 
+                                title="Digite um CPF no formato 000.000.000-00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone <span class="required">*</span></label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required
+                                pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                                title="Digite um telefone no formato (00) 00000-0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nascimento">Data de Nascimento <span class="required">*</span></label>
+                        <input type="date" id="nascimento" name="nascimento" required>
+                    </div>
+
+                        <legend><h3>Endereço</h3></legend>
+
+                        <div class="form-group">
+                            <label for="cep">CEP <span class="required">*</span></label>
+                            <input type="text" id="cep" name="cep" placeholder="00000-000" required
+                                   pattern="\d{5}-?\d{3}"
+                                   title="Digite um CEP no formato 00000-000">
                         </div>
 
-                        <div>
-                            <label for="telefone">Telefone</label>
-                            <input type="tel" id="telefone" name="telefone" placeholder="(00)00000-0000">
+                        <div class="form-group">
+                            <label for="endereco">Endereço <span class="required">*</span></label>
+                            <input type="text" id="endereco" name="endereco" placeholder="Insira seu endereço" required>
                         </div>
 
-                        <div>
-                            <label for="nascimento">Data de Nascimento</label>
-                            <input type="date" id="nascimento" name="nascimento" required>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Endereço</legend>
-
-                        <div>
-                            <label for="cep">CEP</label>
-                            <input type="text" id="cep" name="cep" placeholder="00000-000">
+                        <div class="form-group">
+                            <label for="cidade">Cidade <span class="required">*</span></label>
+                            <input type="text" id="cidade" name="cidade" placeholder="Insira sua cidade" required>
                         </div>
 
-                        <div>
-                            <label for="endereco">Endereço</label>
-                            <input type="text" id="endereco" name="endereco" placeholder="Insira seu endereço">
+                        <div class="form-group">
+                            <label for="estado">Estado <span class="required">*</span></label>
+                            <input type="text" id="estado" name="estado" placeholder="Insira seu estado" required>
                         </div>
 
-                        <div>
-                            <label for="cidade">Cidade</label>
-                            <input type="text" id="cidade" name="cidade" placeholder="Insira sua cidade">
-                        </div>
-                        
-                        <div>
-                            <label for="estado">Estado</label>
-                            <input type="text" id="estado" name="estado" placeholder="Insira seu estado">
-                        </div>
-                    </fieldset>
-
-                    <button type="submit">
-                        Cadastrar-se
-                    </button>
+                    <div class="button-group">
+                        <button type="submit" class="btn-submit">Enviar cadastro</button>
+                        <button type="reset" class="btn-reset">Limpar formulário</button>
+                    </div>
                 </form>
             </section>
         </main>
