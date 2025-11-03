@@ -532,3 +532,24 @@ footer {
 footer p {
     margin: 0;
 }
+
+.form-group .error-message {
+    display: none; 
+    font-size: 0.9rem;
+    color: #ff0000;
+    margin-top: var(--space-0-5);
+}
+
+.form-group.error .error-message {
+    display: block; /* Exibe a mensagem */
+}
+
+.form-group.error input {
+    border-color: #ff0000;
+    background-color: var(--cor-white);
+}
+
+.form-group.success input {
+    border-color: #28a745;
+    background-color: var(--cor-white);
+}
